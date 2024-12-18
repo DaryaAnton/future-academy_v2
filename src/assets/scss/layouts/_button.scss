@@ -1,0 +1,61 @@
+.btn {
+  padding: 12px 20px;
+  min-width: 150px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 186%;
+  text-wrap: nowrap;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &__orange {
+    color: $color-secondary;
+    background-color: $color-orange;
+    transition: background-color .4s;
+
+    &:hover {
+      background-color: $color-orange--light;
+    }
+  }
+  &__news-list {
+    font-weight: 500;
+    color: $color-blue--dark;
+    padding: 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.news__card-banner-btn {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+  color: $color-primary;
+  padding: 17px 80px;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    background-color: $color-gray--1;
+    border: 2px solid $color-gray--1;
+    color: $color-secondary; 
+  }
+  &_blue {
+    color: $color-blue--dark;
+    border: 2px solid $color-blue--dark;
+    &:hover {
+      background-color: $color-blue--dark;
+      color: $color-secondary;
+    }
+  }
+}
+
+@media screen and (min-width: $width-lg) {
+  .news__card-banner-btn {
+    padding: 17px 60px;
+  }
+}

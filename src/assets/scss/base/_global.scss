@@ -1,0 +1,51 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family--monserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-primary;
+  background-color: $color-body;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.page-body {
+  padding-top: 80px;
+
+  &--lock {
+    overflow: hidden;
+  }
+
+  @media(min-width: $width-xl) {
+    padding-top: 110px;
+  }
+}
+
+.container {
+  padding: 0 10px;
+}

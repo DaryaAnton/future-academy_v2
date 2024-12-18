@@ -1,0 +1,15 @@
+.privilege {
+  &__text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (min-width: $width-lg) {
+  .privilege {
+    &__text {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}

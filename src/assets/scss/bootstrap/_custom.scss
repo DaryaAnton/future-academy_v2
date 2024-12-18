@@ -1,0 +1,49 @@
+//СТАНДАРТНЫЕ 
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+
+// ОТСТУПЫ В ROW
+// --bs-gutter-x: px;
+// --bs-gutter-y: px;
+
+// ОТСТУПЫ
+$spacer: 10px;
+$spacers: (
+  0:0
+);
+
+@for $i from 1 through 20 {
+  $spacers: map-merge($spacers, ($i: (
+        $i * $spacer))
+  );
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
