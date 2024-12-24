@@ -1,14 +1,15 @@
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import HeroComponent from '@/components/HeroComponent.vue';
+import TabsComponent from '@/components/TabsComponent.vue';
+import OwlComponent from '@/components/OwlComponent.vue';
 
 export default {
-  components: { HeaderComponent }
+  components: { HeroComponent, TabsComponent, OwlComponent }
 }
 </script>
 
 <template>
   <main>
-    <HeaderComponent />
 
     <!--hero--primary--------------------------->
     <section class="hero hero--primary mb-10">
@@ -17,13 +18,14 @@ export default {
       </div>
 
       <div class="container z-1 position-relative">
-        <div class="row">
+        <HeroComponent/>
+        <!-- <div class="row">
           <div class="col col-md-6">
             <h1 class="hero__title">Образовательная платформа</h1>
             <h2 class="hero__title">ХОД Future Academy</h2>
             <p class="hero__text">Актуальные знания для новичков и профессионалов</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!--hero--primary--------------------------->
@@ -32,7 +34,8 @@ export default {
     <section class="tabs">
       <div class="container">
         <div class="row mb-4">
-          <div class="col-12 col-lg-3 mb-4 mb-lg-0 appeal__owl">
+          <OwlComponent/>
+          <!-- <div class="col-12 col-lg-3 mb-4 mb-lg-0 appeal__owl">
 
             <div class="owl__speech">
               <div class="owl__speech-title fs-lg-6 fw-semibold mb-2">Кем вы хотите стать?</div>
@@ -46,9 +49,10 @@ export default {
             </div>
 
             <img class="owl__common owl__common_tabs" src="@/assets/images/common/owl.svg" alt="owl">
-          </div>
+          </div> -->
 
-          <div class="col-12 col-lg-9">
+          <TabsComponent/>
+          <!-- <div class="col-12 col-lg-9">
             <ul class="nav nav-underline mb-3 d-flex justify-content-between" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active d-flex align-items-center" id="pills-home-tab" data-bs-toggle="pill"
@@ -139,7 +143,7 @@ export default {
               </div>
 
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
