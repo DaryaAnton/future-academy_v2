@@ -1,8 +1,8 @@
 <template>
-  <header class="fixed-top header-main header-main--light">
+  <header :class="headerClasses">
     <nav class="navbar navbar-expand-xl py-2">
       <div class="container">
-        <router-link to="/">
+        <router-link to="/" class="header-main__logo me-xl-6">
           <svg width="57" height="40">
             <use xlink:href="@/assets/icons/sprite.svg#logo"></use>
           </svg>
@@ -39,8 +39,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                    checked="">
+                  <input class="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                   <label class="form-check-label" for="flexRadioDefault2">
                     Нижний Новгород
                   </label>
@@ -73,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav align-items-xl-center gap-xl-4 me-xl-auto">
             <li class="nav-item">
-              
+
               <router-link to="/courses">
                 <svg width="20" height="16">
                   <use xlink:href="@/assets/icons/sprite.svg#categories"></use>
@@ -180,3 +179,24 @@
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  props: {
+    theme: {
+      type: String,
+      default: 'light'
+    }
+  },
+  computed: {
+    headerClasses() {
+      return {
+        'sticky-top': true,
+        'header-main': true,
+        'header-main--light': this.theme === 'light',
+        'header-main--dark': this.theme === 'dark'
+      };
+    }
+  }
+}
+</script>
