@@ -1,15 +1,14 @@
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import TabsComponent from '@/components/TabsComponent.vue';
 
 export default {
-  components: { HeaderComponent }
+  components: { TabsComponent }
 }
 </script>
 
 <template>
   <main>
-    <HeaderComponent/>
-    
+
     <section class="pt-2 pb-5 pb-lg-10">
       <div class="container">
 
@@ -120,7 +119,8 @@ export default {
 
               </div>
 
-              <div class="col-12 col-lg-9">
+              <TabsComponent/>
+              <!-- <div class="col-12 col-lg-9">
                 <ul class="nav nav-underline mb-3 d-flex justify-content-between border-bottom" id="pills-tab"
                   role="tablist">
                   <li class="nav-item" role="presentation">
@@ -245,7 +245,7 @@ export default {
 
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
