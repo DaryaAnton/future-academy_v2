@@ -7,8 +7,8 @@ import CoursesViews from '@/views/CoursesViews.vue';
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: HomeViews },
-  { path: '/courses', component: CoursesViews }
+  { path: '/', component: HomeViews, name: 'home' },
+  { path: '/courses', component: CoursesViews, name: 'courses' }
 ]
 
 const router = new VueRouter({
